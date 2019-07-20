@@ -1,0 +1,50 @@
+html, body {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	background: #000;
+}
+
+video {
+	opacity: .7;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+
+#logo {
+    width: 200%;
+    height: 200%;
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    background-image: url(media/new3leg_2.jpg);
+    background-position: center;
+    background-size: 17px;
+    opacity: .5;
+    z-index: 0;
+    transform: rotate(-45deg);
+    animation: ani 30s infinite;
+}
+body:hover #logo {
+    
+}
+@keyframes ani {
+  0% {
+    background-size: 20px;
+    opacity: .5;
+    transform: rotate(-45deg);
+  }
+  50% {
+    background-size: 200px;
+    opacity: .3;
+    transform: rotate(45deg);
+  }
+  100% {
+    background-size: 20px;
+    opacity: .5;
+    transform: rotate(-45deg);
+  }
+
+}
