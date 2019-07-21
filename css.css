@@ -62,7 +62,7 @@ main {
     font-size: 1.2rem;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-grow: 1;
 }
@@ -72,7 +72,8 @@ main a {
   justify-content: center;
   flex-flow: column;
   font-size: 1.8rem;
-  padding: 1rem 8rem;
+  padding: 1rem 1rem 2rem;
+  flex: 1 1 0;
 }
 main a i {
   font-size: 5rem;
@@ -80,10 +81,7 @@ main a i {
 }
 @media only screen and (min-width: 918px) {
   main a {
-    padding: 0 8rem;
-  }
-  main a:first-of-type {
-    border-right: 1px solid #171929;
+    padding: 1rem;
   }
   main a i {
     padding-bottom: 2rem;
