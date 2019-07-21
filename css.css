@@ -1,10 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:700);
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 
 
 html, body {
   margin: 0;
-  font-family: 'Arial', serif;
-  color: #333;
+  font-family: 'Oswald', serif;
+  color: #171929;
   background: #fff;
   width: 100%;
   height: 100%;
@@ -14,9 +14,7 @@ body {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
-}
-main {
-  flex: 1;
+  text-align: center;
 }
 
 header, main, footer {
@@ -25,86 +23,71 @@ header, main, footer {
   position: relative;
 }
 
-
-.bg {
-  background-image: url(images/cheap_diagonal_fabric.png);
-background-position: center;
-    background-repeat: repeat;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    height: 100%;
-    width: 100%;
-  opacity: .4;
-}
-
-
-.clear:after {
-  content: "";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-
-.island {
-  max-width: 70rem;
-  margin: 0 auto;
-  padding: 0 .5rem;
-}
-
 a {
-  text-decoration: none;
   color: inherit;
+}
+a.icon {
+  text-decoration: none;
 }
 
 
 header {
-  padding: 5rem .5rem .5rem;
+      color: #fff;
+      background: #171929;
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column;
+      text-transform: uppercase;
 }
-header .island {
-  padding: 1rem 0 1rem;
-  display: flex;
-  align-items: center;
-  flex-flow: row;
-  justify-content: space-between;
-}
-header a {
-  padding: 1rem 0;
-  margin: 0 .75rem;
-  font-size: 1.3rem;
-  color: #666;
-}
-header a:first-of-type {
-  margin-left: 0;
-}
-header a:last-of-type {
-  margin-right: 0;
-}
-header a.home {
-  margin-right: auto;
+header h1 {
   font-weight: bold;
   padding-bottom: 1rem;
-  font-family: 'Source Code Pro', monospace;
   font-size: 2rem;
+  letter-spacing: .5rem;
+}
+header p {
+  font-size: 1.8rem;
+  letter-spacing: .8rem;
 }
 @media only screen and (min-width: 700px) {
-header a.home {
+header h1 {
   font-size: 2.9rem;
 }
 }
 
 
 main {
-background: rgba(255,255,255, .5);
-    padding: 2rem .5rem;
     font-size: 1.2rem;
-    box-shadow: rgba(255,255,255,.5) 0 45px 45px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
-p {
-  max-width: 50rem;
-  line-height: 1.5;
+main a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  font-size: 1.8rem;
+  padding: 1rem 8rem;
+}
+main a i {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 918px) {
+  main a {
+    padding: 0 8rem;
+  }
+  main a:first-of-type {
+    border-right: 1px solid #171929;
+  }
+  main a i {
+    padding-bottom: 2rem;
+  }
 }
 
 
@@ -117,74 +100,14 @@ p {
 }
 
 
-main nav {
-  margin: 2rem 0 0;
-}
-main a:hover {
-  background: #2cbfa2;
-}
-main a.button {
-  border:none;
-  background-color: rgba(46, 197, 166, .5);
-  display: inline-block;
-  padding: .25rem 1.5rem;
-  border-radius: 2px;
-  text-decoration: none;
-}
-main a.button:hover {
-  background-color: rgba(46, 197, 166, 1);
-}
-
-
 footer {
-    text-align: center;
-    font-size: .85rem;
-    padding: 1rem 0;
-    flex-grow: 1;
-    display: flex;
-    align-items: flex-end;
-    min-height: 4rem;
-}
-footer .footnote {
+  text-align: center;
+  padding: .25rem 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   font-size: .7rem;
-  font-style: italic;
-  opacity: 0;
-  transition: opacity ease .3s;
-}
-footer .footnote:hover {
-  opacity: 1;
-}
-
-
-
-body.gallery main {
-  flex: 1 0 auto;
-}
-main .gallery img {
-  width: 100%;
-
-}
-main .gallery {
-  column-count: 3;
-  margin: 5rem auto;
-  column-gap: .5rem;
-}
-main .gallery > * {
-  display: block;
-}
-
-
-
-body.home h1 {
-  display: none;
-}
-.lead {
-    line-height: 1.15;
-    font-size: 1.6rem;
-  margin: 0;
-  padding: 0;
-}
-.lead li {
-  margin: 0 0 .75rem 1.5rem;
-  padding: 0;
+  color: #aaa;
+  height: 1rem;
+  font-family: 'Arial', sans-serif;
 }
